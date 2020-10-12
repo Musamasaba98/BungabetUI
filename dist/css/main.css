@@ -49,15 +49,21 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .card {
   width: 33%;
+  min-width: 33%;
   background: #1a1a1a;
   color: #ffffff;
+  -webkit-transition: background 1000ms ease-in;
+  transition: background 1000ms ease-in;
 }
 
 .card__info {
@@ -84,16 +90,22 @@ hr {
 }
 
 .card h3 {
+  display: block;
+  position: relative;
   margin-top: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: centre;
-      -ms-flex-pack: centre;
-          justify-content: centre;
-  -webkit-box-align: centre;
-      -ms-flex-align: centre;
-          align-items: centre;
+  padding: 0.5rem 10rem;
+  -webkit-box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.7);
+          box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.7);
+  background-size: 100% 200%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.7)), color-stop(50%, #f9b422));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 50%, #f9b422 50%);
+  -webkit-transition: background-position 350ms ease-in;
+  transition: background-position 350ms ease-in;
+  /*transition: background 250s ease-in;*/
+}
+
+.card:hover h3 {
+  background-position: 0 -100%;
 }
 
 .header {
@@ -232,9 +244,97 @@ hr {
   color: #000000;
 }
 
+.header .head_container .odds__update {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4.5fr 1fr;
+      grid-template-columns: 4.5fr 1fr;
+  color: #ffffff;
+}
+
+.header .head_container .odds__update--ad {
+  margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header .head_container .odds__update--ad img {
+  display: inline-block;
+  width: 250px;
+}
+
+.header .head_container .odds__update--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 1rem;
+}
+
+.header .head_container .odds__update--list__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: centre;
+      -ms-flex-align: centre;
+          align-items: centre;
+  color: rgba(255, 255, 255, 0.46);
+  max-width: 100%;
+  background: #1a1a1a;
+}
+
+.header .head_container .odds__update--list__header h4 {
+  padding: 5px;
+  margin: 0.5rem;
+}
+
+.header .head_container .odds__update--list__header .periods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: centre;
+      -ms-flex-pack: centre;
+          justify-content: centre;
+  -webkit-box-align: centre;
+      -ms-flex-align: centre;
+          align-items: centre;
+  padding: 5px;
+  margin: 0.5rem;
+}
+
+.header .head_container .odds__update--list__header .periods li {
+  padding-right: 0.5rem;
+}
+
+.header .head_container .odds__update--list--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background: green;
+}
+
 .footer {
   margin-bottom: 0;
-  margin-top: 9rem;
+  margin-top: 40rem;
   background: #1a1a1a;
   color: #ffffff;
   display: -webkit-box;
@@ -253,6 +353,8 @@ hr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -262,6 +364,8 @@ hr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: start;
