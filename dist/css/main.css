@@ -108,6 +108,12 @@ hr {
   background-position: 0 -100%;
 }
 
+.active {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid #f9b422;
+  color: #ffffff;
+}
+
 .header {
   display: block;
   background: url("../../images/banner.jpg") no-repeat;
@@ -267,7 +273,7 @@ hr {
 
 .header .head_container .odds__update--ad img {
   display: inline-block;
-  width: 250px;
+  width: 200px;
 }
 
 .header .head_container .odds__update--list {
@@ -313,28 +319,95 @@ hr {
           align-items: centre;
   padding: 5px;
   margin: 0.5rem;
+  margin-bottom: 0px;
 }
 
 .header .head_container .odds__update--list__header .periods li {
   padding-right: 0.5rem;
 }
 
-.header .head_container .odds__update--list--info {
+.header .head_container .odds__update--list__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+.header .head_container .odds__update--list__info .list__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.46);
+}
+
+.header .head_container .odds__update--list__info .list__header .middle__column,
+.header .head_container .odds__update--list__info .list__header .right__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background: green;
+}
+
+.header .head_container .odds__update--list__info .list__header .middle__column li,
+.header .head_container .odds__update--list__info .list__header .right__column li {
+  padding: 0.5rem;
+}
+
+.header .head_container .odds__update--list__info .list__header .right__column li {
+  border-left: 1px solid #000000;
+}
+
+.header .head_container .odds__update--list__middle {
+  background: rgba(58, 58, 58, 0.7);
+}
+
+.header .head_container .odds__update--list__middle .sports-icon li {
+  float: left;
+  background: #3a3a3a;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.header .head_container .odds__update--list__middle .sports-icon li span {
+  display: none;
+}
+
+.header .head_container .odds__update--list__middle .sports-icon li i {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header .head_container .odds__update--list__middle .sports-icon .active {
+  color: #000000;
+  background: #f38228;
+}
+
+.header .head_container .odds__update--list__middle .sports-icon .active span {
+  display: inline;
+}
+
+.header .head_container .odds__update--list__middle .sports-icon .active i {
+  color: #000000;
 }
 
 .footer {
   margin-bottom: 0;
-  margin-top: 40rem;
+  margin-top: 32rem;
   background: #1a1a1a;
   color: #ffffff;
   display: -webkit-box;
